@@ -215,7 +215,10 @@
   </main>
 
   <footer>
-    <p>&#169; 2025 Lukas Mathesius</p>
-  </footer>
+   <p>&#169; <span id="year"></span> Lukas Mathesius</p>
+   <script>
+     document.getElementById('year').textContent = new Date().getFullYear();
+   </script>
+ </footer>
 </body>
 </html>
