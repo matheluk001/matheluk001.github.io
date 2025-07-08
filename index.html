@@ -14,11 +14,44 @@
       <a href="mailto:lfm797@my.utexas.edu">lfm797@my.utexas.edu</a> |
       <a href="https://linkedin.com/in/LukasMathesius" target="_blank">linkedin.com/in/LukasMathesius</a> |
       Austin, TX |
-      <a href="tel:+16156632287">(615) 663-2287</a>
+      <a href="tel:+16156632287">(615) 663-2287</a> |
+      <a href="https://github.com/matheluk001" target="_blank" class="github-link">
+         <svg aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" fill="currentColor" 
+             d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59
+             .4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49
+             -2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+             -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82
+             .72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
+             -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+             -.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82
+             .64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27
+             1.53-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1
+             .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95
+             .29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19
+             0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8
+             c0-4.42-3.58-8-8-8Z" />
+         </svg>
+         GitHub
+       </a>
     </div>
     <a href="resume.pdf" download class="download-button">
       &#8595; Download Résumé (PDF)
     </a>
+
+    <nav id="site-nav" class="collapsed">
+      <ul>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#honors">Honors</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </ul>
+    </nav>
+    <button id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      &#9776; Menu
+    </button>
   </header>
 
   <main>
@@ -212,6 +245,29 @@
       <p><strong>Work Eligibility:</strong> Eligible for U.S. work with sponsorship</p>
     </section>
 
+    <section id="contact">
+      <h2>CONTACT</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name<span class="required">*</span></label>
+          <input type="text" id="name" name="name" required />
+          <small class="error-message" aria-live="polite"></small>
+        </div>
+        <div class="form-group">
+          <label for="email">Email<span class="required">*</span></label>
+          <input type="email" id="email" name="email" required />
+          <small class="error-message" aria-live="polite"></small>
+        </div>
+        <div class="form-group">
+          <label for="message">Message<span class="required">*</span></label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <small class="error-message" aria-live="polite"></small>
+        </div>
+        <button type="submit">Send Message</button>
+        <p id="form-success" class="success-message" aria-live="polite"></p>
+      </form>
+    </section>
+
   </main>
 
   <footer>
@@ -220,5 +276,7 @@
      document.getElementById('year').textContent = new Date().getFullYear();
    </script>
  </footer>
+
+ <script src="js/scripts.js"></script>
 </body>
 </html>
