@@ -112,3 +112,14 @@ footer {
   color: #555;
   text-align: right;
 }
+
+@media (max-width: 600px) {
+   .entry {
+     flex-direction: column;
+     align-items: flex-start;
+   }
+   .entry-date {
+     margin-top: 0.25rem;
+   }
+ }
+ 
