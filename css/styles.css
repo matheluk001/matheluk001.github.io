@@ -206,6 +206,10 @@ footer {
    border: 1px solid #ccc;
    border-radius: 0.25rem;
  }
+
+ .send-message:hover {
+   cursor: pointer;
+ }
  .error-message {
    color: #d00;
    font-size: 0.85rem;
