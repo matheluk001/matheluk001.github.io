@@ -1,5 +1,10 @@
 /* css/styles.css */
 
+/* at the top of css/styles.css */
+html {
+   overflow-y: scroll;
+}
+
 /* Reset & base styles (unchanged) */
 * { 
    margin: 0; 
@@ -222,5 +227,69 @@ footer {
    font-size: 0.9rem;
    text-align: center;
    margin-top: 1rem;
+ }
+ 
+ /* PROJECT CARDS */
+.cards-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+   gap: 1rem;
+ }
+ 
+ .project-card {
+   background: #fff;
+   border: 1px solid #ddd;
+   border-radius: 0.5rem;
+   overflow: hidden;
+   cursor: pointer;
+   transition: box-shadow 0.2s ease;
+   position: relative;
+ }
+ 
+ .project-card:hover {
+   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ }
+ 
+ /* front face */
+ .card-front {
+   padding: 1rem;
+   text-align: center;
+ }
+ 
+ .card-front .tools {
+   font-size: 0.85rem;
+   color: #555;
+   margin-top: 0.5rem;
+ }
+ 
+ /* back face (hidden by default) */
+ .card-back {
+   max-height: 0;
+   padding: 0 1rem;
+   overflow: hidden;
+   transition: max-height 0.3s ease, padding 0.3s ease;
+ }
+ 
+ /* when expanded: show back */
+ .project-card[data-expanded="true"] .card-back {
+   max-height: 200px; 
+   padding: 1rem;
+ }
+ 
+ /* back face content */
+ .card-back p {
+   margin-bottom: 0.75rem;
+ }
+ .card-back .btn {
+   display: inline-block;
+   background: #007acc;
+   color: #fff;
+   padding: 0.4rem 0.8rem;
+   border-radius: 0.25rem;
+   text-decoration: none;
+   font-size: 0.9rem;
+ }
+ .card-back .btn:hover {
+   background: #005fa3;
  }
  
