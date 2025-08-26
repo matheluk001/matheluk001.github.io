@@ -272,7 +272,7 @@ footer {
  
  /* when expanded: show back */
  .project-card[data-expanded="true"] .card-back {
-   max-height: 200px; 
+   max-height: 400px; 
    padding: 1rem;
  }
  
